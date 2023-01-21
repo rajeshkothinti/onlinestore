@@ -11,6 +11,7 @@ pipeline {
             steps {
                 dir("/var/lib/jenkins/workspace/store/") {
                 sh 'mvn -B -DskipTests clean package'
+				sh 'built done'
                 }
             } 
         }
