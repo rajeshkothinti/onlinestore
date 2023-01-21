@@ -11,7 +11,7 @@ pipeline {
             steps {
                 dir("/var/lib/jenkins/workspace/store/") {
                 sh 'mvn -B -DskipTests clean package'
-				echo 'webhook test'
+				echo 'webhook  test'
                 }
             } 
         }
