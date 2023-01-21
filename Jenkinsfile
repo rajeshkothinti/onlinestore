@@ -6,6 +6,12 @@ pipeline {
               	    echo "cloning repository" 
               	    echo "repo cloned successfully"  
               	    }  
-         	    } 
+         	    }
+		    stage('Build') {
+            steps {
+                dir("/var/lib/jenkins/workspace/store/") {
+                sh 'mvn -B -DskipTests clean package'
+                }
+            } 
         }
 }
